@@ -1,0 +1,16 @@
+def min_total_cost(T, test_cases):
+    results = []
+    for case in test_cases:
+        N, X = case
+        subscriptions_needed = (N + 5) // 6
+        total_cost = subscriptions_needed * X
+        results.append(total_cost)
+    return results
+
+T = int(input()) 
+test_cases = [tuple(map(int, input().split())) for _ in range(T)]
+
+results = min_total_cost(T, test_cases)
+
+for result in results:
+    print(result)
